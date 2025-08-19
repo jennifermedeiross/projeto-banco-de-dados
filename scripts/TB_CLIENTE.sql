@@ -7,7 +7,8 @@ CREATE TABLE cliente (
     email               VARCHAR(100) UNIQUE,
     pontos              INT,
     cliente_indicador   INT,
-    CONSTRAINT pk_cliente PRIMARY KEY(codigo)
+    CONSTRAINT pk_cliente PRIMARY KEY(codigo),
     CONSTRAINT fk_cliente_cliente FOREIGN KEY (cliente_indicador)
         REFERENCES cliente(codigo)
+        ON DELETE SET NULL
 );

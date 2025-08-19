@@ -1,11 +1,10 @@
 CREATE TABLE cliente (
-    cliente_id          INT,
+    codigo_cliente      INT,
     nome                VARCHAR(100) NOT NULL,
     sobrenome           VARCHAR(200),
     data_nascimento     DATE,
     sexo                VARCHAR(30),
     email               VARCHAR(100) UNIQUE,
     pontos              INT,
-    CONSTRAINT pk_cliente 
-        PRIMARY KEY(cliente_id)
+    CONSTRAINT pk_cliente PRIMARY KEY(codigo_cliente)
 );

@@ -1,4 +1,4 @@
 CREATE TABLE carrinho (
-    carrinho_id     INT,
-    PRIMARY KEY (carrinho_id)
+    codigo_carrinho     INT,
+    PRIMARY KEY (codigo_carrinho)
 );

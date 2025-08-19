@@ -1,8 +1,9 @@
 CREATE TABLE telefone (
-    telefone_id     INT,
-    cliente_id      INT NOT NULL,
-    CONSTRAINT fk_cliente 
-        FOREIGN KEY(cliente_id) 
-        REFERENCES cliente(cliente_id)
+    codigo              INT,
+    codigo_cliente      INT NOT NULL,
+    numero              VARCHAR(20) NOT NULL,
+    CONSTRAINT pk_telefone_cliente PRIMARY KEY (codigo),
+    CONSTRAINT fk_telefone_cliente FOREIGN KEY (codigo_cliente)
+        REFERENCES cliente(codigo)
         ON DELETE CASCADE
 );

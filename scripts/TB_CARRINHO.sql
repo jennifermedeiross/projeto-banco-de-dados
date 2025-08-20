@@ -1,4 +1,15 @@
 CREATE TABLE carrinho (
-    codigo  INT,
-    PRIMARY KEY (codigo)
+    codigo          INT,
+    codigo_cliente  INT NOT NULL UNIQUE,
+    codigo_cupom    INT,
+    CONSTRAINT pk_carrinho PRIMARY KEY (codigo)
 );
+
+ALTER TABLE carrinho 
+ADD CONSTRAINT fk_cupom_carrinho FOREIGN KEY (codigo_cupom)
+    REFERENCES CUPOM_DESCONTO(codigo)
+    ON DELETE SET NULL;
+
+ALTER TABLE CARRINHO
+ADD CONSTRAINT FK_CLIENTE_CARRINHO FOREIGN KEY (CODIGO_CLIENTE) REFERENCES CLIENTE(CODIGO)
+	ON DELETE CASCADE;

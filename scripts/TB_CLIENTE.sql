@@ -1,5 +1,5 @@
 CREATE TABLE cliente (
-    codigo              INT,
+    codigo              INT PRIMARY KEY,
     nome                VARCHAR(255) NOT NULL,
     sobrenome           VARCHAR(255) NOT NULL,
     data_nascimento     DATE NOT NULL,
@@ -12,10 +12,9 @@ CREATE TABLE cliente (
     cep                 VARCHAR(10) NOT NULL,
     numero              VARCHAR(20) NOT NULL,
     bairro              VARCHAR(255),
-    CONSTRAINT pk_cliente PRIMARY KEY(codigo)
 );
 
 ALTER TABLE cliente
 ADD CONSTRAINT fk_cliente_cliente FOREIGN KEY (cliente_indicador)
     REFERENCES cliente(codigo)
-    ON DELETE SET NULL
+    ON DELETE SET NULL;

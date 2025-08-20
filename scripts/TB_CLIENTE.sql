@@ -12,7 +12,7 @@ CREATE TABLE cliente (
     cep                 VARCHAR(10) NOT NULL,
     numero              VARCHAR(20) NOT NULL,
     bairro              VARCHAR(255),
-    CONSTRAINT pk_cliente PRIMARY KEY(codigo),
+    CONSTRAINT pk_cliente PRIMARY KEY(codigo)
 );
 
 ALTER TABLE cliente

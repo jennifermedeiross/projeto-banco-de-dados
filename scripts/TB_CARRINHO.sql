@@ -1,8 +1,7 @@
 CREATE TABLE carrinho (
-    codigo          INT,
+    codigo          INT PRIMARY KEY,
     codigo_cliente  INT NOT NULL UNIQUE,
     codigo_cupom    INT,
-    CONSTRAINT pk_carrinho PRIMARY KEY (codigo)
 );
 
 ALTER TABLE carrinho 

@@ -1,0 +1,20 @@
+-- questao 2:
+SELECT 
+    MIN(DATA_COMPRA) AS MENOR_DATA,
+    MAX(DATA_COMPRA) AS MAIOR_DATA
+FROM ORDEM_DE_COMPRA;
+
+-- questao 9:
+
+SELECT t.NOME,
+       CASE 
+         WHEN EXISTS (
+           SELECT 1
+           FROM ORDEM_DE_COMPRA oc
+           WHERE oc.CODIGO_TRANSPORTADORA = t.CODIGO
+             AND oc.STATUS = 'FINALIZADA'
+         ) 
+         THEN 1 
+         ELSE 0 
+       END AS STATUS_ENTREGA
+FROM TRANSPORTADORA t;

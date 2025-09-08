@@ -24,11 +24,13 @@ O sistema da FastBuy contempla:
 - Histórico de navegação, adições ao carrinho e envio de ofertas por e-mail.  
 
 ## Estrutura do Repositório
-- `scripts/` – arquivos e scripts DDL do banco de dados.  
+- `ddl_ecommerce/` – arquivos e scripts DDL do banco de dados.
+- `scripts_fase3/` – Scripts com as consultas propostas na fase 3.
 
 ## Entregas
 - **Fase 1:** Modelagem Conceitual (MER).  
-- **Fase 2:** Modelo Relacional.  
+- **Fase 2:** Modelo Relacional.
+- **Fase 3:** Consultas SQL respondendo às 10 questões do grupo.
 
 ---
 

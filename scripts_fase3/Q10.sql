@@ -1,13 +1,6 @@
--- questao 6:
-SELECT 
-    c.NOME AS CATEGORIA
-FROM PRODUTO p
-JOIN CATEGORIA c 
-    ON p.CODIGO_CATEGORIA = c.CODIGO
-GROUP BY c.NOME
-HAVING AVG(p.PRECO) > 2000;
+-- 10 - Liste os produtos que foram adicionados ao carrinho mais de 5 vezes, 
+-- projetando o código do produto, o nome e o total de vezes em que foi adicionado
 
--- questao 10:
 SELECT 
     p.CODIGO,
     p.NOME,

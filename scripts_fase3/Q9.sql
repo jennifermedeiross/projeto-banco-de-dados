@@ -1,10 +1,5 @@
--- questao 2:
-SELECT 
-    MIN(DATA_COMPRA) AS MENOR_DATA,
-    MAX(DATA_COMPRA) AS MAIOR_DATA
-FROM ORDEM_DE_COMPRA;
-
--- questao 9:
+-- 9 -  Mostre o nome da transportadora e um status que indica se ela já entregou pedidos ou não.
+-- Se sim, o status tem valor 1 e caso contrário, tem valor 0.
 
 SELECT t.NOME,
        CASE 

@@ -3,7 +3,7 @@
 -- total de ordens de compra daquele mês, juntamente com o nome do cliente que as realizou.
 
 SELECT 
-    c.nome || ' ' || c.sobrenome        AS cliente,
+    c.nome,
     TO_CHAR(o.data_compra, 'MM/YYYY')   AS mes_ano,
     COUNT(o.codigo)                     AS total_compras
 FROM ORDEM_DE_COMPRA o

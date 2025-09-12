@@ -1,25 +1,25 @@
-create OR REPLACE function get_qtd_prox_vencimentos(COD_CD NUMBER)
+CREATE OR REPLACE FUNCTION get_qtd_prox_vencimentos(COD_CD NUMBER)
 RETURN NUMBER
-is 
+IS
 DATA_VALIDADE_MAX DATE := SYSDATE + 5;
 DATA_PRODUTO PRODUTO.DATA_VALIDADE%TYPE;
 CONTADOR NUMBER := 0;
-cursor produtos is
-    select p.DATA_VALIDADE
-    from produto p, PROD_ESTOCADO_CENT_DIST pecd
-    where COD_CD = pecd.CODIGO_CENTRO_DISTRIBUICAO and
-        pecd.CODIGO_PRODUTO = p.codigo and
-        p.DATA_VALIDADE > SYSDATE;
-begin
+CURSOR produtos IS
+    SELECT p.DATA_VALIDADE
+    FROM produto p, PROD_ESTOCADO_CENT_DIST pecd
+    WHERE COD_CD = pecd.CODIGO_CENTRO_DISTRIBUICAO AND
+        pecd.CODIGO_PRODUTO = p.codigo AND
+        p.DATA_VALIDADE > SYSDATE AND
+        p.DATA_VALIDADE < DATA_VALIDADE_MAX;
+BEGIN
     OPEN produtos;
     LOOP
         FETCH produtos INTO DATA_PRODUTO;
         EXIT WHEN produtos%NOTFOUND;
-        if DATA_PRODUTO < DATA_VALIDADE_MAX then CONTADOR:=CONTADOR+1;
-        END IF;
+        CONTADOR:=CONTADOR+1;
 
     END LOOP;
-    close produtos;
+    CLOSE produtos;
 
-    return contador;
-end;
+    RETURN contador;
+END;

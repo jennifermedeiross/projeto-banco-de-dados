@@ -3,6 +3,8 @@
 -- os produtos comprados para os estoques do centro de distribuição dele,
 -- ou seja, ele soma a quantidade atual no estoque com a quantidade que 
 -- previamente havia sido comprada.
+
+--sem querer mandei pro main
 CREATE OR REPLACE PROCEDURE devolver_estoque(
     p_codigo_compra IN ORDEM_DE_COMPRA.codigo%TYPE) 
 AS  

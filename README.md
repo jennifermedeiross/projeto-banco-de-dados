@@ -26,7 +26,7 @@ O sistema da FastBuy contempla:
 ## Estrutura do Repositório
 - `ddl_ecommerce/` – Scripts **DDL** _(Data Definition Language)_ para definição do esquema do banco de dados: criação de tabelas, constraints, índices e relacionamentos.
 
-- `scripts_fase3/` – Scripts **DML** _(Data Manipulation Language)_ com consultas SQL desenvolvidas para responder às 10 questões propostas na Fase 3.
+- `sql_queries/` – Scripts **DML** _(Data Manipulation Language)_ com consultas SQL desenvolvidas para responder às 10 questões propostas na Fase 3.
 
 - `scripts_fase4/` – Implementações de **Stored Procedures, Functions, Triggers e Views**, elaboradas para resolver um novo conjunto de 10 questões, com foco em manutenção de integridade, encapsulamento de regras de negócio e automação de operações.
 

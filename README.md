@@ -24,13 +24,24 @@ O sistema da FastBuy contempla:
 - Histórico de navegação, adições ao carrinho e envio de ofertas por e-mail.  
 
 ## Estrutura do Repositório
-- `ddl_ecommerce/` – arquivos e scripts DDL do banco de dados.
-- `scripts_fase3/` – Scripts com as consultas propostas na fase 3.
+- `ddl_ecommerce/` – Scripts **DDL** _(Data Definition Language)_ para definição do esquema do banco de dados: criação de tabelas, constraints, índices e relacionamentos.
+
+- `scripts_fase3/` – Scripts **DML** _(Data Manipulation Language)_ com consultas SQL desenvolvidas para responder às 10 questões propostas na Fase 3.
+
+- `scripts_fase4/` – Implementações de **Stored Procedures, Functions, Triggers e Views**, elaboradas para resolver um novo conjunto de 10 questões, com foco em manutenção de integridade, encapsulamento de regras de negócio e automação de operações.
 
 ## Entregas
-- **Fase 1:** Modelagem Conceitual (MER).  
-- **Fase 2:** Modelo Relacional.
-- **Fase 3:** Consultas SQL respondendo às 10 questões do grupo.
+- **Fase 1 – Modelagem Conceitual (MER):**  
+  Identificação de entidades, atributos e relacionamentos do domínio de e-commerce.  
+
+- **Fase 2 – Modelo Relacional:**  
+  Conversão do MER em modelo relacional, com aplicação de normalização e definição de chaves.  
+
+- **Fase 3 – Consultas SQL (DML):**  
+  Desenvolvimento de consultas SQL utilizando **SELECT, JOINs, subqueries, agrupamentos e filtros**, respondendo às 10 questões propostas.  
+
+- **Fase 4 – Objetos de Banco de Dados:**  
+  Criação de **Stored Procedures, User-Defined Functions, Triggers e Views**, resolvendo outro conjunto de questões, com ênfase em **integridade referencial, consistência de dados, regras de negócio e automação de processos**.  
 
 ---
 

@@ -3,8 +3,6 @@
 -- os produtos comprados para os estoques do centro de distribuição dele,
 -- ou seja, ele soma a quantidade atual no estoque com a quantidade que 
 -- previamente havia sido comprada.
-
---sem querer mandei pro main
 CREATE OR REPLACE PROCEDURE devolver_estoque(
     p_codigo_compra IN ORDEM_DE_COMPRA.codigo%TYPE) 
 AS  
@@ -15,12 +13,10 @@ BEGIN
         SELECT cpp.codigo_produto, cpp.quantidade
         FROM COMPRA_POSSUI_PRODUTO cpp
         JOIN ORDEM_DE_COMPRA oc ON cpp.codigo_compra = oc.codigo
-        WHERE cpp.codigo_compra = p_codigo_compra AND oc.status = 'FINALIZADA'
+        WHERE cpp.codigo_compra = p_codigo_compra
     )
     LOOP
-
         BEGIN
-
             SELECT codigo_centro_distribuicao
             INTO v_cd_devolucao
             FROM PROD_ESTOCADO_CENT_DIST
@@ -31,7 +27,6 @@ BEGIN
             SET quantidade = quantidade + item.quantidade
             WHERE codigo_produto = item.codigo_produto
             AND codigo_centro_distribuicao = v_cd_devolucao;
-
         EXCEPTION
             WHEN NO_DATA_FOUND THEN
                 DBMS_OUTPUT.PUT_LINE('AVISO: Produto ' || item.codigo_produto || ' não está estocado em nenhum CD. Devolução ignorada para este item.');

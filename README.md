@@ -28,7 +28,7 @@ O sistema da FastBuy contempla:
 
 - `sql_queries/` – Scripts **DML** _(Data Manipulation Language)_ com consultas SQL desenvolvidas para responder às 10 questões propostas na Fase 3.
 
-- `scripts_fase4/` – Implementações de **Stored Procedures, Functions, Triggers e Views**, elaboradas para resolver um novo conjunto de 10 questões, com foco em manutenção de integridade, encapsulamento de regras de negócio e automação de operações.
+- `plsql_objects/` – Implementações de **Stored Procedures, Functions, Triggers e Views**, elaboradas para resolver um novo conjunto de 10 questões, com foco em manutenção de integridade, encapsulamento de regras de negócio e automação de operações.
 
 ## Entregas
 - **Fase 1 – Modelagem Conceitual (MER):**  

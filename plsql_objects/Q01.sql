@@ -32,5 +32,4 @@ BEGIN
                 DBMS_OUTPUT.PUT_LINE('AVISO: Produto ' || item.codigo_produto || ' não está estocado em nenhum CD. Devolução ignorada para este item.');
         END;
     END LOOP;
-    COMMIT;
 END devolver_estoque;

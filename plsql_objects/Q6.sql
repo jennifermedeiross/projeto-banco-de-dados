@@ -12,7 +12,5 @@ BEGIN
         FROM ORDEM_DE_COMPRA
         WHERE STATUS <> 'FINALIZADA'
     );
-
-    COMMIT;
 END;
 /
